@@ -53,7 +53,7 @@ export default function MentorshipMatcher() {
 
       setMatchResult(matches);
       setIsMatching(false);
-    }, 7000); // 700ms simulation
+    }, 1000); // 1000ms simulation
   };
 
   return (
