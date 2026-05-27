@@ -1,0 +1,6 @@
+{
+  "name": "She Can Foundation",
+  "description": "A simple, professional, and responsive contact webpage for the She Can Foundation featuring interactive form validation, a modern layout, and smooth animations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>She Can Foundation | Professional Contact Form</title>
+    <!-- Link to Custom Stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+
+    <!-- --- Header / Brand Logo Section --- -->
+    <header class="header" id="appHeader">
+      <a href="#" class="logo-container" aria-label="She Can Foundation Homepage">
+        <!-- Elegant SVG Monogram Logo (S + C blended) - Marked as role="img" with descriptive label -->
+        <span class="logo-icon" role="img" aria-label="She Can Foundation S Logo">S</span>
+        <span class="logo-text">She Can<span>.</span></span>
+      </a>
+    </header>
+
+    <!-- 
+      ACCESSIBILITY NOTE FOR FUTURE DEVELOPMENT (WCAG Guidelines):
+      If you add any <img> elements in the future (e.g., banner images, partner logos or team avatars):
+      1. Always include a meaningful, descriptive 'alt' attribute: e.g., <img src="team.jpg" alt="She Can Foundation members collaborating in a workshop">
+      2. If the image is purely decorative, use an empty alt attribute: alt="" so screen readers ignore it.
+    -->
+
+    <!-- --- Main Layout and Card Container --- -->
+    <main class="main-container" id="mainContent">
+      <div class="card-wrapper" id="contactCard">
+        
+        <!-- Form Header Section -->
+        <div class="card-header">
+          <h1 class="card-title">Get In Touch</h1>
+          <p class="card-subtitle">
+            We would love to hear from you. Please fill out this form to connect with our team.
+          </p>
+        </div>
+
+        <!-- The Contact Form - Screen-reader enhanced using valid programmatic label associations -->
+        <form id="contactForm" autocomplete="on" novalidate>
+          
+          <!-- Full Name Field -->
+          <div class="form-group">
+            <label for="fullName" class="form-label">Full Name</label>
+            <div class="input-container">
+              <!-- SVG Icon for User - aria-hidden="true" applied so screen-readers ignore decorative SVGs -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="input-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+              </svg>
+              <input 
+                type="text" 
+                id="fullName" 
+                name="fullName" 
+                class="form-input" 
+                placeholder="Enter your full name" 
+                required 
+                aria-required="true"
+              />
+            </div>
+          </div>
+
+          <!-- Email Address Field -->
+          <div class="form-group">
+            <label for="email" class="form-label">Email Address</label>
+            <div class="input-container">
+              <!-- SVG Icon for Mail - hidden for screen readers -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="input-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                class="form-input" 
+                placeholder="you@example.com" 
+                required 
+                aria-required="true"
+              />
+            </div>
+          </div>
+
+          <!-- Message Textarea Field -->
+          <div class="form-group textarea-group">
+            <label for="message" class="form-label">Message</label>
+            <div class="input-container">
+              <!-- SVG Icon for Chat Message - hidden for screen readers -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="input-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+              </svg>
+              <textarea 
+                id="message" 
+                name="message" 
+                class="form-textarea" 
+                placeholder="Write your message here..." 
+                required
+                aria-required="true"
+              ></textarea>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn-submit" id="submitBtn">
+            <span>Send Message</span>
+            <!-- SVG Arrow Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </button>
+
+        </form>
+
+        <!-- --- Animated Success Overlay State --- -->
+        <div class="success-overlay" id="successOverlay" role="dialog" aria-modal="true" aria-labelledby="successTitle">
+          <div class="success-icon">
+            <!-- SVG Checkmark Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none" viewBox="0 0 24 24" stroke="#10b981" stroke-width="3" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <h2 class="success-title" id="successTitle">Form Submitted Successfully ✅</h2>
+          <p class="success-msg">
+            Thank you for reaching out to **She Can Foundation**! Our team has received your message and will get back to you shortly.
+          </p>
+          <button type="button" class="btn-reset" id="resetFormButton" aria-label="Return to submit a new message form">
+            <!-- SVG Backward Arrow -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            <span>Submit a New Form</span>
+          </button>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- --- Modern Footer Section --- -->
+    <footer class="footer" id="appFooter">
+      <p class="footer-text">Developed by <span>Nithya</span></p>
+    </footer>
+
+    <!-- Link to JavaScript Controller -->
+    <script src="/script.js" defer></script>
+  </body>
+</html>
