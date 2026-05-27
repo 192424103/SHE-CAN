@@ -311,7 +311,6 @@ body::after {
 
 /* --- Success State Styling --- */
 .success-overlay {
-  display: none; /* Controlled by script.js */
   position: absolute;
   top: 0;
   left: 0;
@@ -327,14 +326,15 @@ body::after {
   text-align: center;
   z-index: 20;
   opacity: 0;
+  visibility: hidden;
   transform: scale(0.95);
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease;
   pointer-events: none;
 }
 
 .success-overlay.active {
-  display: flex;
   opacity: 1;
+  visibility: visible;
   transform: scale(1);
   pointer-events: auto;
 }
